@@ -13,13 +13,13 @@
       <image:loc>https://countdown.cend.in/assets/images/icon-512x512.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/01-event-list.webp</image:loc>
+      <image:loc>https://countdown.cend.in/app_screens/01-events-list.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/02-create-countdown.webp</image:loc>
+      <image:loc>https://countdown.cend.in/app_screens/02-create-event.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/03-event-detail.webp</image:loc>
+      <image:loc>https://countdown.cend.in/app_screens/04-countdown-details.webp</image:loc>
     </image:image>
   </url>
   <url>

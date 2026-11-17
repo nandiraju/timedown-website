@@ -32,8 +32,8 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Preload hero screenshot (LCP on desktop) -->
-    <link rel="preload" as="image" media="(min-width: 1024px)" href="app_screens/01-event-list.webp"
-        imagesrcset="app_screens/01-event-list-600.webp 600w, app_screens/01-event-list-900.webp 900w, app_screens/01-event-list.webp 1282w"
+    <link rel="preload" as="image" media="(min-width: 1024px)" href="app_screens/01-events-list.webp"
+        imagesrcset="app_screens/01-events-list-600.webp 600w, app_screens/01-events-list-900.webp 900w, app_screens/01-events-list.webp 1080w"
         imagesizes="292px" type="image/webp" fetchpriority="high">
 
     <!-- Open Graph / Facebook -->
@@ -296,9 +296,9 @@
                             <div class="iphone mx-auto shadow-2xl">
                                 <div class="iphone-island" aria-hidden="true"></div>
                                 <div class="iphone-screen">
-                                    <img id="hero-phone-img" src="app_screens/01-event-list.webp"
-                                        srcset="app_screens/01-event-list-600.webp 600w, app_screens/01-event-list-900.webp 900w, app_screens/01-event-list.webp 1282w"
-                                        sizes="292px" alt="CounttMinus event list screen"
+                                    <img id="hero-phone-img" src="app_screens/01-events-list.webp"
+                                        srcset="app_screens/01-events-list-600.webp 600w, app_screens/01-events-list-900.webp 900w, app_screens/01-events-list.webp 1080w"
+                                        sizes="292px" alt="CounttMinus events list screen"
                                         class="w-full h-full object-cover transition-opacity duration-300">
                                 </div>
                             </div>
@@ -306,25 +306,29 @@
                             <!-- Screen Selector Tabs -->
                             <div class="mt-8 flex flex-wrap justify-center gap-2" role="tablist"
                                 aria-label="App screen previews">
-                                <button type="button" role="tab" aria-selected="true" data-screen="01-event-list"
+                                <button type="button" role="tab" aria-selected="true" data-screen="01-events-list"
                                     class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-heading)] transition-all cursor-pointer">
-                                    Event List
+                                    Events List
                                 </button>
-                                <button type="button" role="tab" aria-selected="false" data-screen="02-create-countdown"
+                                <button type="button" role="tab" aria-selected="false" data-screen="02-create-event"
                                     class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-main)] opacity-70 hover:opacity-100 transition-all cursor-pointer">
                                     Add Event
                                 </button>
-                                <button type="button" role="tab" aria-selected="false" data-screen="03-event-detail"
+                                <button type="button" role="tab" aria-selected="false" data-screen="03-date-picker"
                                     class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-main)] opacity-70 hover:opacity-100 transition-all cursor-pointer">
-                                    Countdown
+                                    Date Picker
                                 </button>
-                                <button type="button" role="tab" aria-selected="false" data-screen="04-live-timer"
+                                <button type="button" role="tab" aria-selected="false" data-screen="04-countdown-details"
                                     class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-main)] opacity-70 hover:opacity-100 transition-all cursor-pointer">
-                                    Live Timer
+                                    Live Countdown
                                 </button>
-                                <button type="button" role="tab" aria-selected="false" data-screen="05-milestones"
+                                <button type="button" role="tab" aria-selected="false" data-screen="05-edit-event"
                                     class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-main)] opacity-70 hover:opacity-100 transition-all cursor-pointer">
-                                    Milestones
+                                    Edit Event
+                                </button>
+                                <button type="button" role="tab" aria-selected="false" data-screen="06-empty-state"
+                                    class="screen-tab px-3.5 py-1.5 rounded-full text-xs font-medium border border-[var(--surface-border)] bg-[var(--surface-card)] text-[var(--text-main)] opacity-70 hover:opacity-100 transition-all cursor-pointer">
+                                    Clean State
                                 </button>
                             </div>
                         </div>
@@ -940,7 +944,7 @@
                 phoneImg.style.opacity = '0';
                 setTimeout(() => {
                     phoneImg.src = `app_screens/${screenName}.webp`;
-                    phoneImg.srcset = `app_screens/${screenName}-600.webp 600w, app_screens/${screenName}-900.webp 900w, app_screens/${screenName}.webp 1282w`;
+                    phoneImg.srcset = `app_screens/${screenName}-600.webp 600w, app_screens/${screenName}-900.webp 900w, app_screens/${screenName}.webp 1080w`;
                     phoneImg.style.opacity = '1';
                 }, 150);
             }
