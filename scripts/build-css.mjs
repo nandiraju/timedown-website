@@ -3,13 +3,21 @@
 // GitHub Pages CDN never serve a stale stylesheet after a change.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, rmSync } from 'node:fs';
 
 const PAGES = ['index', 'contact', 'privacy_policy', 'terms_of_service', '404'];
 
 for (const page of PAGES) {
   const out = `assets/css/${page}.css`;
-  execFileSync('npx', ['tailwindcss', '-i', `src/css/${page}.css`, '-o', out, '--minify'], { stdio: 'inherit' });
+  // Append the shared theme layer so it overrides each page's defaults. The temp file lives next to the
+  // page source so relative url()/@source paths keep resolving.
+  const tmp = `src/css/.${page}.build.css`;
+  writeFileSync(tmp, readFileSync(`src/css/${page}.css`, 'utf8') + '\n' + readFileSync('src/css/shared-theme.css', 'utf8'));
+  try {
+    execFileSync('npx', ['tailwindcss', '-i', tmp, '-o', out, '--minify'], { stdio: 'inherit' });
+  } finally {
+    rmSync(tmp, { force: true });
+  }
   const hash = createHash('sha256').update(readFileSync(out)).digest('hex').slice(0, 10);
   const htmlFile = `${page}.html`;
   const html = readFileSync(htmlFile, 'utf8');

@@ -1,6 +1,6 @@
 {
-  "name": "CounttMinus — Clean & Simple Countdown App",
-  "short_name": "CounttMinus",
+  "name": "TimeDown — Clean & Simple Countdown App",
+  "short_name": "TimeDown",
   "description": "Count the days to the moments that matter. Simple, clean countdown app for birthdays, vacations, weddings, anniversaries, exams and holidays.",
   "start_url": "./",
   "scope": "./",
@@ -8,6 +8,12 @@
   "background_color": "#0b0f19",
   "theme_color": "#6366f1",
   "icons": [
+    {
+      "src": "assets/images/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "assets/images/app-icon.webp",
       "sizes": "512x512",

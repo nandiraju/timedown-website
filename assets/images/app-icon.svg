@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">TimeDown clock icon</title>
+  <rect width="1024" height="1024" fill="#EDE9FE"/>
+  <circle cx="512" cy="512" r="340" fill="#4E80DC"/>
+  <path d="M452.2 762.4A257.5 257.5 0 1 1 735 383.3" fill="none" stroke="#EDE9FE" stroke-width="31"/>
+  <circle cx="767" cy="257" r="159" fill="#EDE9FE"/>
+  <circle cx="767" cy="257" r="105" fill="#4E80DC"/>
+  <path d="M510.5 358.5V532.4L626.6 608.9" fill="none" stroke="#EDE9FE" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -25,15 +25,15 @@
 @theme {
     --font-outfit: 'Outfit', sans-serif;
     --font-inter: 'Inter', sans-serif;
-    --color-primary: #4f46e5;
-    --color-secondary: #ec4899;
+    --color-primary: #059669;
+    --color-secondary: #22d3ee;
 }
 
 :root {
     --bg-color: #f8fbff;
-    --bg-gradient: radial-gradient(circle at 10% 0%, rgba(79, 70, 229, 0.07) 0%, transparent 45%),
-                   radial-gradient(circle at 90% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 42%),
-                   radial-gradient(circle at 80% 90%, rgba(236, 72, 153, 0.05) 0%, transparent 45%);
+    --bg-gradient: radial-gradient(circle at 10% 0%, rgba(5, 150, 105, 0.07) 0%, transparent 45%),
+                   radial-gradient(circle at 90% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 42%),
+                   radial-gradient(circle at 80% 90%, rgba(34, 211, 238, 0.05) 0%, transparent 45%);
     --surface-card: #ffffff;
     --surface-subtle: #f1f6fd;
     --surface-border: rgba(15, 23, 42, 0.08);
@@ -44,9 +44,9 @@
 
 .dark {
     --bg-color: #0f172a;
-    --bg-gradient: radial-gradient(circle at 12% 8%, rgba(99, 102, 241, 0.20) 0%, transparent 45%),
-                   radial-gradient(circle at 88% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%),
-                   radial-gradient(circle at 60% 25%, rgba(56, 189, 248, 0.08) 0%, transparent 35%);
+    --bg-gradient: radial-gradient(circle at 12% 8%, rgba(16, 185, 129, 0.20) 0%, transparent 45%),
+                   radial-gradient(circle at 88% 85%, rgba(34, 211, 238, 0.12) 0%, transparent 45%),
+                   radial-gradient(circle at 60% 25%, rgba(6, 182, 212, 0.08) 0%, transparent 35%);
     --surface-card: rgba(30, 41, 59, 0.65);
     --surface-subtle: rgba(255, 255, 255, 0.05);
     --surface-border: rgba(255, 255, 255, 0.08);
@@ -71,11 +71,11 @@ h1, h2, h3, h4 {
 }
 
 .text-gradient {
-    @apply bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-600 via-violet-600 to-pink-500 bg-clip-text text-transparent;
 }
 
 .dark .text-gradient {
-    @apply bg-gradient-to-r from-indigo-400 via-violet-400 to-pink-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-400 via-violet-400 to-pink-400 bg-clip-text text-transparent;
 }
 
 .app-card {
@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-link {
-    @apply text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors;
+    @apply text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-white transition-colors;
 }
 .obf-addr[data-u]::before { content: attr(data-u) "\0040" attr(data-d); }
 /* Dark theme: liquid-glass surfaces over ambient color orbs */
@@ -121,9 +121,9 @@ h1, h2, h3, h4 {
     filter: blur(90px);
     opacity: 0.55;
 }
-.ambient .orb-a { width: 46vw; height: 46vw; top: -12%; left: -8%; background: #4f46e5; }
-.ambient .orb-b { width: 40vw; height: 40vw; top: 28%; right: -10%; background: #0ea5e9; opacity: 0.38; }
-.ambient .orb-c { width: 44vw; height: 44vw; bottom: -14%; left: 26%; background: #db2777; opacity: 0.34; }
+.ambient .orb-a { width: 46vw; height: 46vw; top: -12%; left: -8%; background: #059669; }
+.ambient .orb-b { width: 40vw; height: 40vw; top: 28%; right: -10%; background: #06b6d4; opacity: 0.38; }
+.ambient .orb-c { width: 44vw; height: 44vw; bottom: -14%; left: 26%; background: #06b6d4; opacity: 0.34; }
 
 .dark .app-card {
     background:

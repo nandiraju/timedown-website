@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Shared TimeDown theme layer. NOT compiled on its own: scripts/build-css.mjs
+   appends this file to the end of every page's source CSS, so these rules
+   override the per-page defaults above them. Palette: emerald green blended
+   into teal and cyan (the cyan echoes the blue app icon), over liquid glass.
+   ========================================================================== */
+
+:root {
+    --bg-color: #f2fbf7;
+    --bg-gradient: radial-gradient(circle at 8% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 46%),
+                   radial-gradient(circle at 92% 12%, rgba(6, 182, 212, 0.11) 0%, transparent 42%),
+                   radial-gradient(circle at 78% 92%, rgba(34, 197, 94, 0.09) 0%, transparent 46%);
+    --surface-subtle: #e8f6ef;
+}
+
+.dark {
+    --bg-color: #04120d;
+    --bg-gradient: radial-gradient(circle at 12% 6%, rgba(16, 185, 129, 0.28) 0%, transparent 46%),
+                   radial-gradient(circle at 90% 18%, rgba(6, 182, 212, 0.20) 0%, transparent 42%),
+                   radial-gradient(circle at 68% 96%, rgba(34, 197, 94, 0.15) 0%, transparent 46%);
+    --surface-card: rgba(6, 38, 30, 0.6);
+    --surface-subtle: rgba(167, 243, 208, 0.06);
+    --surface-border: rgba(167, 243, 208, 0.13);
+    --surface-shadow: 0 20px 45px -15px rgba(0, 10, 6, 0.7);
+    --text-main: #a8c5b9;
+    --text-heading: #ffffff;
+}
+
+/* --- Aurora orbs behind the glass (green, cyan, teal, deep blue) --------- */
+.dark .ambient span { will-change: transform; animation: orb-drift 30s ease-in-out infinite alternate; }
+.ambient .orb-a { width: 50vw; height: 50vw; top: -14%; left: -10%; background: #10b981; opacity: 0.50; }
+.ambient .orb-b { width: 42vw; height: 42vw; top: 24%; right: -12%; background: #06b6d4; opacity: 0.38; animation-duration: 36s; animation-direction: alternate-reverse; }
+.ambient .orb-c { width: 44vw; height: 44vw; bottom: -16%; left: 20%; background: #14b8a6; opacity: 0.38; animation-duration: 42s; }
+.ambient .orb-d { width: 30vw; height: 30vw; top: 52%; left: -8%; background: #2563eb; opacity: 0.22; animation-duration: 48s; animation-direction: alternate-reverse; }
+
+@keyframes orb-drift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to   { transform: translate3d(5vw, 4vh, 0) scale(1.14); }
+}
+
+/* --- Glass: green-tinted rims, specular highlight, pointer spotlight ----- */
+.dark .app-card {
+    border-color: rgba(167, 243, 208, 0.17);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.24),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 28px rgba(110, 231, 183, 0.04),
+        0 24px 48px -22px rgba(0, 10, 6, 0.8);
+}
+.dark .app-card:hover {
+    background:
+        radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(52, 211, 153, 0.20), transparent 62%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0.07) 100%);
+}
+.dark .subtle-tile { border-color: rgba(167, 243, 208, 0.14); }
+.dark .nav-glass,
+.dark header.sticky { background-color: rgba(4, 18, 13, 0.55); }
+
+/* --- Lottie illustrations ------------------------------------------------ */
+.lottie {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.lottie.is-ready { opacity: 1; transform: none; }
+.lottie > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 18px 36px rgba(16, 185, 129, 0.22));
+}
+
+/* --- Gradient accent text ------------------------------------------------ */
+.text-aurora {
+    background-image: linear-gradient(100deg, #6ee7b7 0%, #34d399 30%, #22d3ee 65%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Touch devices: orbs hold still (saves battery); no hover spotlight exists there. */
+@media (hover: none) and (pointer: coarse) {
+    .dark .ambient span { animation: none; will-change: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .dark .ambient span { animation: none; }
+    .lottie { transition: none; transform: none; }
+}

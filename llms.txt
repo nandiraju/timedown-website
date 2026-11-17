@@ -1,6 +1,6 @@
-# CounttMinus (TimeDown)
+# TimeDown
 
-> CounttMinus (TimeDown) is a simple, clean, and elegant countdown timer app for iOS. Count the days to the moments that matter—birthdays, vacations, weddings, anniversaries, exams, holidays, and milestones. Zero clutter, live updates, and all your events in one beautiful list.
+> TimeDown is a simple, clean, and elegant countdown timer app for iOS and Android. Count the days to the moments that matter—birthdays, vacations, weddings, anniversaries, exams, holidays, and milestones. Zero clutter, live updates, and all your events in one beautiful list.
 
 ## Key Facts
 - **Developer:** Designed and developed by Srikanth Nandiraju ([Twitter / X @nandiraju](https://twitter.com/nandiraju))
@@ -17,7 +17,7 @@
   1. Tap `+` to create a countdown in seconds.
   2. Give your event a name, a personal note, and a target date.
   3. View every upcoming event in one unified list with exact days and time remaining.
-- **Why CounttMinus:**
+- **Why TimeDown:**
   - Simple: No clutter, just your events and the days left.
   - Clean dark aesthetic: High contrast typography and AMOLED-friendly dark palette.
   - Real-time updates: Live counter showing days, hours, and minutes.
