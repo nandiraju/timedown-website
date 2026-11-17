@@ -1,26 +1,43 @@
-# Mood Meter
+# CounttMinus (TimeDown)
 
-> Mood Meter (MoodMeter) is a 100% free, local-first mood tracker and emotional journal for iOS and Android. No ads, no subscriptions, no accounts, and zero cloud tracking—every mood entry and reflection stays strictly on your device.
+> CounttMinus (TimeDown) is a simple, clean, and elegant countdown timer app for iOS. Count the days to the moments that matter—birthdays, vacations, weddings, anniversaries, exams, holidays, and milestones. Zero clutter, live updates, and all your events in one beautiful list.
 
 ## Key Facts
-- **Developer:** Designed and developed by Srikanth Nandiraju ([srikanth.nandiraju.com](https://srikanth.nandiraju.com/))
-- **Price:** $0 forever (no ads, no subscriptions, no in-app purchases, no locked "Pro" features)
-- **Platforms:** iOS (iPhone & iPad via Apple App Store) and Android (phones & tablets via Google Play)
-- **Privacy Architecture:** 100% on-device local storage (`AsyncStorage`), offline-ready, no sign-up required, zero third-party analytics or ad SDKs in the app (the website uses Google Analytics)
-- **Built-in Emotional Vocabulary:** 220+ expressive mood icons with instant search, plus unlimited user-created **Custom Vibes** (Custom Vibemojis)
-- **Mood Logging ("Capture Vibe"):** 1–5 intensity slider with dynamic pulse feedback, voice-typing friendly journal reflections, and flexible date/time backdating
-- **Timeline Journal ("History"):** Chronological feed with intensity badges, full-text search across mood names and reflections, and one-tap editing or deletion
-- **On-Device Analytics:** Current Vibe Streak, Vibe Power Gauge (*Low Hum*, *Steady*, *High Voltage*, *Supernova*), per-mood contribution donut gauges, 7-day Intensity Trend line chart, top-5 Vibe Distribution, Hourly Activity bars, and 8 key metrics (*Days Tracked*, *Avg Intensity*, *Common Mood*, *7D Average WoW*, *Best Day*, *Worst Day*, *High Intensity %*, *Mood Diversity*)
-- **Appearance:** Built-in Light Mode and Dark Mode
+- **Developer:** Designed and developed by Srikanth Nandiraju ([Twitter / X @nandiraju](https://twitter.com/nandiraju))
+- **Price:** Free
+- **Platform:** iOS (iPhone & iPad via Apple App Store, ID: 1644886404)
+- **App Store Link:** [https://apps.apple.com/us/app/timedown-counttminus/id1644886404](https://apps.apple.com/us/app/timedown-counttminus/id1644886404)
+- **Privacy Architecture:** 100% on-device local privacy, no account required, no sign-up, zero third-party ads
+- **Design Philosophy:** Minimalist, high-contrast dark design optimized for quick glancing and focus
+- **Event Capacity:** Track unlimited event countdowns
+
+## Core Functionality
+- **How It Works:**
+  1. Tap `+` to create a countdown in seconds.
+  2. Give your event a name, a personal note, and a target date.
+  3. View every upcoming event in one unified list with exact days and time remaining.
+- **Why CounttMinus:**
+  - Simple: No clutter, just your events and the days left.
+  - Clean dark aesthetic: High contrast typography and AMOLED-friendly dark palette.
+  - Real-time updates: Live counter showing days, hours, and minutes.
+  - Multi-event tracking: Create and manage as many countdowns as you need.
+- **Popular Use Cases:**
+  - Birthday countdowns
+  - Vacation and travel countdowns
+  - Wedding day counter
+  - Anniversary reminders
+  - Exam and academic deadline tracking
+  - Holiday and festival anticipation
+  - Baby due date tracking
+  - Retirement milestones
 
 ## Official Pages
-- [Home](https://moodmeter.cend.in/): Product overview, interactive 5-screen tour, analytics breakdown, and FAQ
-- [Privacy Policy](https://moodmeter.cend.in/privacy_policy.html): Complete details on local-first on-device data custody
-- [Terms of Service](https://moodmeter.cend.in/terms_of_service.html): Free license terms, user content ownership, and wellness disclaimer
-- [Contact & Support](https://moodmeter.cend.in/contact.html): Support answers, feedback composer, and direct email contact
-- [XML Sitemap](https://moodmeter.cend.in/sitemap.xml): Canonical page and image index
+- [Home](https://countdown.cend.in/): App overview, feature walkthrough, interactive event categories, and direct download links
+- [Privacy Policy](https://countdown.cend.in/privacy_policy.html): Complete details on on-device data privacy
+- [Terms of Service](https://countdown.cend.in/terms_of_service.html): Usage terms and license
+- [Contact & Support](https://countdown.cend.in/contact.html): Support and developer contact
+- [XML Sitemap](https://countdown.cend.in/sitemap.xml): Canonical index
 
 ## App Downloads & Contact
-- [Download on the Apple App Store](https://apps.apple.com/us/app/mood-meter/id391278676)
-- [Get it on Google Play](https://play.google.com/store/apps/details?id=com.jaw_drop.moodmeter)
-- [Contact & Support Page](https://moodmeter.cend.in/contact.html)
+- [Download on the Apple App Store](https://apps.apple.com/us/app/timedown-counttminus/id1644886404)
+- [Contact & Support](https://countdown.cend.in/contact.html)

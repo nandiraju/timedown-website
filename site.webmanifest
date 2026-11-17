@@ -1,17 +1,17 @@
 {
-  "name": "Mood Meter — Free, Private Mood Tracker",
-  "short_name": "Mood Meter",
-  "description": "100% free, local-first mood tracker and emotional journal for iOS and Android. 220+ moods, custom vibes, and on-device analytics.",
+  "name": "CounttMinus — Clean & Simple Countdown App",
+  "short_name": "CounttMinus",
+  "description": "Count the days to the moments that matter. Simple, clean countdown app for birthdays, vacations, weddings, anniversaries, exams and holidays.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#4f46e5",
+  "background_color": "#0b0f19",
+  "theme_color": "#6366f1",
   "icons": [
     {
-      "src": "assets/images/app-icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/images/app-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
       "purpose": "any"
     },
     {
