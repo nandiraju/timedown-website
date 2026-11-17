@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Mood Meter</title>
+    <meta name="description" content="This page doesn't exist. Head back to Mood Meter, the free, private mood tracker and journal for iOS and Android.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0f172a">
+    <!-- Served by GitHub Pages at any missing path, so every URL here is root-absolute -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/app-icon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48x48.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon-192x192.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png?v=2">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Fonts: self-hosted variable woff2 via @font-face in src/css/<page>.css (font-display: swap). Not preloaded on purpose: preloading competed with the render-blocking CSS on slow mobile connections. -->
+    <!-- Precompiled Tailwind CSS (source: src/css/404.css) -->
+    <link rel="stylesheet" href="/assets/css/404.css?v=1b43cf3505">
+    <!-- Google tag (GA4, MoodMeter property). Consent defaults + banner live in assets/js/analytics.js, which must load first and synchronously. -->
+    <script src="/assets/js/analytics.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBMC3XJK4X"></script>
+
+    <!-- Dark theme by default; light only if the visitor chose it (saved as mm-theme=light) -->
+    <script>
+        (function () {
+            let light = false;
+            try { light = localStorage.getItem('mm-theme') === 'light'; } catch (_) {}
+            document.documentElement.classList.toggle('dark', !light);
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', light ? '#f8fbff' : '#0f172a');
+        })();
+    </script>
+</head>
+<body class="selection:bg-indigo-500/20 antialiased min-h-screen flex flex-col">
+    <div class="ambient" aria-hidden="true"><span class="orb-a"></span><span class="orb-b"></span><span class="orb-c"></span></div>
+
+    <header class="nav-glass">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center" aria-label="Primary">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="/assets/images/app-icon.svg" alt="Mood Meter dial icon" width="40" height="40" class="w-10 h-10 rounded-xl shadow-sm ring-1 ring-slate-900/10 dark:ring-white/10 group-hover:scale-105 transition-transform">
+                <span class="font-outfit text-xl md:text-2xl font-extrabold tracking-tight" style="color: var(--text-heading);">
+                    Mood<span class="text-indigo-600 dark:text-indigo-400">Meter</span>
+                </span>
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="flex-1 flex items-center">
+        <section class="max-w-2xl mx-auto px-6 py-20 text-center">
+            <p class="font-outfit text-7xl sm:text-8xl font-black text-gradient mb-4">404</p>
+            <h1 class="text-3xl sm:text-5xl font-extrabold mb-4">This vibe doesn't exist.</h1>
+            <p class="text-lg leading-relaxed mb-9">The page you're looking for has moved or never existed. Try one of these instead.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="/" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-full shadow-lg shadow-indigo-600/25 transition-all">Back to Home</a>
+                <a href="/#faq" class="px-6 py-3 rounded-full app-card text-sm font-bold" style="color: var(--text-heading);">FAQ</a>
+                <a href="/contact.html" class="px-6 py-3 rounded-full app-card text-sm font-bold" style="color: var(--text-heading);">Contact &amp; Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 border-t border-slate-900/8 dark:border-white/10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 text-sm font-semibold">
+            <a href="/" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+            <a href="/privacy_policy.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</a>
+            <a href="/terms_of_service.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</a>
+            <a href="/contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            <button id="theme-toggle" type="button" class="w-9 h-9 flex items-center justify-center rounded-full text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-900/5 dark:hover:bg-white/10 transition-colors cursor-pointer" aria-label="Toggle color theme" title="Toggle light/dark theme">
+                <svg id="theme-toggle-icon" class="icon text-lg" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>
+            </button>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-5 text-center">
+            <p class="text-xs mb-2">Mood Meter app &amp; website designed and developed by <a href="https://srikanth.nandiraju.com/" target="_blank" rel="author noopener" class="font-semibold underline hover:text-indigo-600 dark:hover:text-indigo-400">Srikanth Nandiraju</a> <span aria-hidden="true">·</span> <a href="https://ai.nandiraju.com/" target="_blank" rel="noopener" class="underline hover:text-indigo-600 dark:hover:text-indigo-400">Talk to the digital twin of Srikanth Nandiraju</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+        function syncThemeIcons() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeToggleIcon.firstElementChild.setAttribute('href', themeToggleIcon.firstElementChild.getAttribute('href').split('#')[0] + '#' + (isDark ? 'sunny' : 'moon'));
+        }
+        syncThemeIcons();
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            try { localStorage.setItem('mm-theme', isDark ? 'dark' : 'light'); } catch (_) {}
+            const themeMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeMeta) themeMeta.setAttribute('content', isDark ? '#0f172a' : '#f8fbff');
+            syncThemeIcons();
+        });
+    </script>
+</body>
+</html>

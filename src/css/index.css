@@ -1,0 +1,509 @@
+/* Source for assets/css/index.css — build with `npm run build:css`. Do not edit the output file. */
+@import "tailwindcss" source(none);
+@source "../../index.html";
+
+/* Self-hosted variable fonts (Google Fonts latin subset, SIL OFL 1.1). Preloaded in each page <head>. */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('../fonts/inter-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600 900;
+    font-display: swap;
+    src: url('../fonts/outfit-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --color-primary: #4f46e5;
+    --color-secondary: #ec4899;
+}
+
+:root {
+    --bg-color: #f8fbff;
+    --bg-gradient: radial-gradient(circle at 10% 0%, rgba(79, 70, 229, 0.07) 0%, transparent 45%),
+                   radial-gradient(circle at 90% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 42%),
+                   radial-gradient(circle at 80% 90%, rgba(236, 72, 153, 0.05) 0%, transparent 45%);
+    --surface-card: #ffffff;
+    --surface-subtle: #f1f6fd;
+    --surface-border: rgba(15, 23, 42, 0.08);
+    --surface-shadow: 0 14px 34px -10px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    --text-main: #475569;
+    --text-heading: #0f172a;
+}
+
+.dark {
+    --bg-color: #0f172a;
+    --bg-gradient: radial-gradient(circle at 12% 8%, rgba(99, 102, 241, 0.20) 0%, transparent 45%),
+                   radial-gradient(circle at 88% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%),
+                   radial-gradient(circle at 60% 25%, rgba(56, 189, 248, 0.08) 0%, transparent 35%);
+    --surface-card: rgba(30, 41, 59, 0.65);
+    --surface-subtle: rgba(255, 255, 255, 0.05);
+    --surface-border: rgba(255, 255, 255, 0.08);
+    --surface-shadow: 0 20px 45px -15px rgba(2, 6, 23, 0.65);
+    --text-main: #aab6cb;
+    --text-heading: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply font-inter transition-colors duration-300;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+    @apply font-outfit;
+    color: var(--text-heading);
+}
+
+.text-gradient {
+    @apply bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent;
+}
+
+.dark .text-gradient {
+    @apply bg-gradient-to-r from-indigo-400 via-violet-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.app-card {
+    background-color: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--surface-shadow);
+    @apply backdrop-blur-xl;
+}
+
+.subtle-tile {
+    background-color: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+}
+
+.nav-glass {
+    background-color: rgba(255, 255, 255, 0.86);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+    @apply backdrop-blur-xl;
+}
+
+.dark .nav-glass {
+    background-color: rgba(15, 23, 42, 0.84);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+    @apply text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors;
+}
+
+/* iPhone 16 Pro proportions, scaled with the width of each mockup. */
+.iphone {
+    position: relative;
+    container-type: inline-size;
+    aspect-ratio: 71.5 / 149.6;
+    margin-inline: auto;
+    border-radius: 15% / 7.17%;
+    background: linear-gradient(135deg, #a7a29b, #514e4a 28%, #292827 65%, #858078);
+    box-shadow: 0 0 0 1px #242322, 0 24px 42px -20px #0f172a80;
+}
+
+.dark .iphone {
+    box-shadow: 0 0 0 1px #1c1b1a, 0 24px 42px -18px #000b;
+}
+
+.iphone-screen {
+    position: absolute;
+    inset: 1.85cqw;
+    overflow: hidden;
+    border: 1.05cqw solid #090909;
+    border-radius: 13.15cqw;
+    background: linear-gradient(
+        var(--screen-top, #0e1728) 50%,
+        var(--screen-bottom, #020617) 50%
+    );
+}
+
+.iphone-screen img {
+    position: absolute;
+    top: 7.5%;
+    width: 100%;
+    height: auto;
+    /* Hide the source status bar and gesture indicator. */
+    clip-path: inset(5% 0 2.5%);
+}
+
+.iphone-screen:has(img[src$="02-capture-vibe.webp"]) {
+    --screen-top: #0f172b;
+    --screen-bottom: #17181f;
+}
+
+.iphone-screen:has(img[src$="05-custom-moods.webp"]) {
+    --screen-bottom: #0f172b;
+}
+
+.iphone-controls {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.iphone-controls::before,
+.iphone-controls::after {
+    content: '';
+    position: absolute;
+    width: 1cqw;
+    border-radius: 1px;
+    background: #706d67;
+}
+
+.iphone-controls::before {
+    left: -0.8cqw;
+    top: 17%;
+    height: 3.3%;
+    box-shadow: 0 11cqw #706d67, 0 21cqw #706d67;
+}
+
+.iphone-controls::after {
+    right: -0.8cqw;
+    top: 24%;
+    height: 7%;
+}
+
+.iphone-status {
+    position: absolute;
+    inset: 2.3% 7.4% auto;
+    height: 7.6cqw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2cqw;
+    color: #fff;
+    font: 600 3.8cqw/1 system-ui, sans-serif;
+}
+
+.iphone-island {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30cqw;
+    height: 7.6cqw;
+    border-radius: 999px;
+    background: radial-gradient(circle at 87% 50%, #192139, #090d16 5%, #000 8%);
+}
+
+.iphone-icons {
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+}
+
+.iphone-signal {
+    width: 4.5cqw;
+    height: 3cqw;
+    background: currentColor;
+    clip-path: polygon(0 100%, 0 71%, 18% 71%, 18% 100%, 28% 100%, 28% 48%, 46% 48%, 46% 100%, 56% 100%, 56% 24%, 74% 24%, 74% 100%, 82% 100%, 82% 0, 100% 0, 100% 100%);
+}
+
+.iphone-battery {
+    position: relative;
+    width: 5.4cqw;
+    height: 3cqw;
+    border: 0.25cqw solid #fff8;
+    border-radius: 0.75cqw;
+    background: currentColor content-box;
+    padding: 0.35cqw;
+}
+
+.iphone-battery::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 0.45cqw);
+    top: 25%;
+    width: 0.5cqw;
+    height: 50%;
+    border-radius: 0 1px 1px 0;
+    background: #fff8;
+}
+
+.iphone-screen::after {
+    content: '';
+    position: absolute;
+    bottom: 0.9%;
+    left: 33%;
+    width: 34%;
+    height: 1.15cqw;
+    border-radius: 999px;
+    background: #f8fafc;
+    pointer-events: none;
+}
+
+
+
+/* Selected screen pill: indigo fill + a shiny border whose highlight orbits the pill.
+   The border is a conic gradient painted into a transparent border (border-box layer under a padding-box fill);
+   rotating the registered --shine-angle (shared with the store badges) spins it. `.dark` selector outranks `.dark .app-card` so the fill survives dark mode. */
+@property --shine-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+.screen-tab[aria-selected="true"],
+.dark .screen-tab[aria-selected="true"] {
+    color: #ffffff;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(135deg, #6366f1 0%, #4f46e5 55%, #4338ca 100%) padding-box,
+        conic-gradient(
+            from var(--shine-angle, 0deg),
+            #4f46e5 0deg, #818cf8 50deg, #ffffff 80deg, #f9a8d4 110deg, #4f46e5 160deg,
+            #4f46e5 200deg, #7dd3fc 250deg, #ffffff 270deg, #4f46e5 320deg
+        ) border-box;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        0 8px 20px -4px rgba(79, 70, 229, 0.45);
+    animation:
+        shine-spin 2.8s linear infinite,
+        pill-select-glow 0.7s ease-out;
+}
+@keyframes shine-spin {
+    to { --shine-angle: 360deg; }
+}
+/* App Store / Google Play badges: same orbiting shine, 3s loop.
+   The SVG badges draw their own 1px black border (rx 5.5 of a 40-unit-high viewBox = ~7.7px at h-14),
+   so a masked ring is laid exactly over it instead of adding a second border. */
+/* Store badges: orbiting shine. Uses real child spans rotated with `transform` (works in every browser)
+   rather than animating a custom property on ::before/::after, which some Safari versions won't run.
+   .badge-ring: border-only ring (mask) laid over the SVG's own 1px border.
+   .badge-glow: blurred halo behind the badge. Each holds an oversized conic square that spins. */
+.store-badge {
+    position: relative;
+    display: block;
+    border-radius: 0.48rem;
+    isolation: isolate;
+}
+.store-badge img {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.badge-ring,
+.badge-glow {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+}
+.badge-ring {
+    inset: -1px;
+    z-index: 2;
+    padding: 2.5px;
+    border-radius: calc(0.48rem + 1px);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+.badge-glow {
+    inset: -5px;
+    z-index: 0;
+    border-radius: calc(0.48rem + 5px);
+    filter: blur(8px);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+.store-badge:hover .badge-glow { opacity: 1; }
+.badge-ring::before,
+.badge-glow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 130%;            /* wider than the badge diagonal, so the corners stay covered while spinning */
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    animation: badge-shine-rotate 12s linear infinite;
+}
+.badge-ring::before {
+    background: conic-gradient(
+        #4f46e5 0deg, #a5b4fc 30deg, #ffffff 55deg, #f472b6 85deg, #4f46e5 130deg,
+        #6366f1 180deg, #7dd3fc 210deg, #ffffff 235deg, #c084fc 265deg, #4f46e5 310deg, #4f46e5 360deg
+    );
+}
+.badge-glow::before {
+    background: conic-gradient(
+        transparent 0deg, rgba(129, 140, 248, 0.9) 45deg, rgba(244, 114, 182, 0.85) 85deg, transparent 140deg,
+        transparent 180deg, rgba(125, 211, 252, 0.9) 225deg, rgba(192, 132, 252, 0.85) 265deg, transparent 320deg
+    );
+}
+@keyframes badge-shine-rotate {
+    from { transform: translate(-50%, -50%) rotate(0turn); }
+    to { transform: translate(-50%, -50%) rotate(1turn); }
+}
+
+/* One-shot flare the moment a pill becomes selected */
+@keyframes pill-select-glow {
+    0% {
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.28),
+            0 0 0 0 rgba(129, 140, 248, 0.75),
+            0 8px 20px -4px rgba(79, 70, 229, 0.45);
+    }
+    100% {
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.28),
+            0 0 0 9px rgba(129, 140, 248, 0),
+            0 8px 20px -4px rgba(79, 70, 229, 0.45);
+    }
+}
+
+.reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+}
+.reveal.active {
+    @apply opacity-100 translate-y-0;
+}
+
+/* Dark theme: liquid-glass surfaces over ambient color orbs */
+.ambient { display: none; }
+.dark .ambient {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+.ambient span {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.55;
+}
+.ambient .orb-a { width: 46vw; height: 46vw; top: -12%; left: -8%; background: #4f46e5; }
+.ambient .orb-b { width: 40vw; height: 40vw; top: 28%; right: -10%; background: #0ea5e9; opacity: 0.38; }
+.ambient .orb-c { width: 44vw; height: 44vw; bottom: -14%; left: 26%; background: #db2777; opacity: 0.34; }
+
+.dark .app-card {
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0.07) 100%);
+    -webkit-backdrop-filter: blur(26px) saturate(170%);
+    backdrop-filter: blur(26px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 28px rgba(255, 255, 255, 0.025),
+        0 24px 48px -22px rgba(2, 6, 23, 0.75);
+}
+
+.dark .subtle-tile {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+    backdrop-filter: blur(14px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+
+.dark .nav-glass {
+    background: rgba(15, 23, 42, 0.45);
+    -webkit-backdrop-filter: blur(24px) saturate(170%);
+    backdrop-filter: blur(24px) saturate(170%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Auto-scrolling mood ticker */
+.ticker {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0 2.5rem;
+    contain: layout paint style;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+}
+.ticker-track { display: flex; width: max-content; will-change: transform; }
+.ticker-set { display: flex; gap: 1rem; padding: 0 1rem 0 0; margin: 0; list-style: none; }
+.ticker-tile {
+    flex: 0 0 auto;
+    width: 7rem;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ticker-tile { box-shadow: 0 10px 22px -14px rgba(15, 23, 42, 0.18); }
+.dark .ticker-tile { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 10px 20px -14px rgba(2, 6, 23, 0.6); }
+/* Moving elements must not use backdrop-filter (re-blurred every frame), so the tiles use a flat translucent fill. */
+.ticker .ticker-tile { -webkit-backdrop-filter: none; backdrop-filter: none; }
+.dark .ticker .ticker-tile {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.06));
+}
+.ticker-tile img { transition: transform 0.3s ease; }
+.ticker-tile:hover img { transform: scale(1.14) rotate(-4deg); }
+.ticker[data-static] { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+}
+
+/* Icons: local SVG sprite (assets/icons/sprite.svg), sized by font-size like the old <ion-icon> (1em box). */
+.icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    flex-shrink: 0;
+    pointer-events: none;
+    vertical-align: middle;
+    overflow: visible;
+}
+.icon:not(.hidden) {
+    display: inline-block;
+}
+
+/* Touch devices (phones/tablets): no live backdrop blur on cards/tiles. With dark as the default theme,
+   ~70 blurred surfaces re-sampled the background on every scroll frame and caused jank on mid/low-end GPUs.
+   The orbs behind are already heavily blurred, so a slightly denser static gradient keeps the glass look.
+   The nav keeps its blur (one element). Desktop (fine pointer + hover) keeps full liquid glass. */
+@media (hover: none) and (pointer: coarse) {
+    .dark .app-card {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.07) 45%, rgba(255, 255, 255, 0.10) 100%);
+    }
+    .dark .subtle-tile {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.05));
+    }
+    .app-card {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+}
+
+/* Infinite decorative animations stop while off-screen (an IntersectionObserver in index.html toggles
+   [data-offscreen] on the tablist and on each .store-badge). Placed last so it wins over the
+   `.dark .screen-tab[aria-selected]` animation shorthand. */
+[role="tablist"][data-offscreen] .screen-tab[aria-selected="true"],
+.store-badge[data-offscreen] .badge-ring::before,
+.store-badge[data-offscreen] .badge-glow::before {
+    animation-play-state: paused;
+}

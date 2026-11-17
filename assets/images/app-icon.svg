@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">MoodMeter smiling dial</title>
+  <defs>
+    <linearGradient id="tile" x2="0%" y2="100%">
+      <stop stop-color="#4f2bd7"/>
+      <stop offset=".5" stop-color="#211b91"/>
+      <stop offset="1" stop-color="#0b105d"/>
+    </linearGradient>
+    <radialGradient id="light" cx="51%" cy="0%" r="70%">
+      <stop stop-color="#a36bff" stop-opacity=".67"/>
+      <stop offset="1" stop-color="#5b3bf5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dial" x2="0%" y2="100%">
+      <stop stop-color="#d9bcff"/>
+      <stop offset="1" stop-color="#b78cf6"/>
+    </linearGradient>
+  </defs>
+  <path id="tile-shape" fill="url(#tile)" d="M285 0H739C937 0 1024 87 1024 285V739C1024 937 937 1024 739 1024H285C87 1024 0 937 0 739V285C0 87 87 0 285 0Z"/>
+  <path fill="url(#light)" d="M285 0H739C937 0 1024 87 1024 285V739C1024 937 937 1024 739 1024H285C87 1024 0 937 0 739V285C0 87 87 0 285 0Z"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M132 589C132 392 302 234 512 234S892 392 892 589" stroke="url(#dial)" stroke-width="37"/>
+    <path d="m231 373 43 41M512 239v72m281 62-43 41" stroke="#cfaaff" stroke-width="27"/>
+    <path d="m512 619 145-189" stroke="#faf6ef" stroke-width="36"/>
+    <path d="M416 718q96 77 192 0" stroke="#9b96e6" stroke-width="17"/>
+  </g>
+  <circle cx="512" cy="619" r="40" fill="#faf6ef"/>
+  <g fill="#9b96e6">
+    <circle cx="352" cy="592" r="19"/>
+    <circle cx="672" cy="592" r="19"/>
+  </g>
+</svg>

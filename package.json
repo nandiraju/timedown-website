@@ -1,0 +1,13 @@
+{
+  "name": "moodmeter-website",
+  "private": true,
+  "description": "Static marketing site for Mood Meter. Tailwind CSS is precompiled; commit the generated files in assets/css/.",
+  "scripts": {
+    "build:css": "node scripts/build-css.mjs",
+    "watch:css": "for p in index contact privacy_policy terms_of_service 404; do tailwindcss -i src/css/$p.css -o assets/css/$p.css --watch & done; wait"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "tailwindcss": "4.3.5"
+  }
+}
