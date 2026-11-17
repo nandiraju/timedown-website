@@ -38,7 +38,7 @@
     <meta property="og:image:height" content="630">
 
     <!-- Precompiled Tailwind CSS -->
-    <link rel="stylesheet" href="assets/css/contact.css?v=60948748ab">
+    <link rel="stylesheet" href="assets/css/contact.css?v=413036dff1">
     <script src="assets/js/analytics.js"></script>
 
     <!-- Dark theme by default -->
@@ -72,9 +72,14 @@
                 <a href="contact.html" class="text-indigo-500 font-semibold">Contact</a>
             </nav>
 
-            <a href="https://apps.apple.com/us/app/timedown-counttminus/id1644886404" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20 transition-all">
-                Get on App Store
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://apps.apple.com/us/app/timedown-counttminus/id1644886404" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-[var(--surface-subtle)] hover:bg-slate-200 dark:hover:bg-slate-800 text-[var(--text-heading)] border border-[var(--surface-border)] transition-all">
+                    <span>App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=nsri.countdown.app" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20 transition-all">
+                    <span>Google Play</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -131,12 +136,27 @@
                             <svg class="icon w-6 h-6 fill-current"><use href="assets/icons/sprite.svg#phone-portrait"></use></svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-[var(--text-heading)] text-lg">App Store Listing</h3>
+                            <h3 class="font-bold text-[var(--text-heading)] text-lg">Apple App Store</h3>
                             <p class="text-xs text-[var(--text-main)] mt-0.5">Rate or review on the iOS App Store</p>
                         </div>
                     </div>
                     <a href="https://apps.apple.com/us/app/timedown-counttminus/id1644886404" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all">
                         View App Store
+                    </a>
+                </div>
+
+                <div class="app-card rounded-3xl p-8 border border-[var(--surface-border)] flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                            <svg class="icon w-6 h-6 fill-current"><use href="assets/icons/sprite.svg#phone-portrait"></use></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[var(--text-heading)] text-lg">Google Play Store</h3>
+                            <p class="text-xs text-[var(--text-main)] mt-0.5">Rate or review on Google Play for Android</p>
+                        </div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=nsri.countdown.app" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/20 transition-all">
+                        View Google Play
                     </a>
                 </div>
             </div>

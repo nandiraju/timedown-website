@@ -5,8 +5,9 @@
 ## Key Facts
 - **Developer:** Designed and developed by Srikanth Nandiraju ([Twitter / X @nandiraju](https://twitter.com/nandiraju))
 - **Price:** Free
-- **Platform:** iOS (iPhone & iPad via Apple App Store, ID: 1644886404)
+- **Platform:** iOS (iPhone & iPad via Apple App Store, ID: 1644886404) and Android (Google Play: nsri.countdown.app)
 - **App Store Link:** [https://apps.apple.com/us/app/timedown-counttminus/id1644886404](https://apps.apple.com/us/app/timedown-counttminus/id1644886404)
+- **Google Play Link:** [https://play.google.com/store/apps/details?id=nsri.countdown.app](https://play.google.com/store/apps/details?id=nsri.countdown.app)
 - **Privacy Architecture:** 100% on-device local privacy, no account required, no sign-up, zero third-party ads
 - **Design Philosophy:** Minimalist, high-contrast dark design optimized for quick glancing and focus
 - **Event Capacity:** Track unlimited event countdowns
@@ -40,4 +41,5 @@
 
 ## App Downloads & Contact
 - [Download on the Apple App Store](https://apps.apple.com/us/app/timedown-counttminus/id1644886404)
+- [Get it on Google Play](https://play.google.com/store/apps/details?id=nsri.countdown.app)
 - [Contact & Support](https://countdown.cend.in/contact.html)
