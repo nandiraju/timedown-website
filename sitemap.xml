@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://countdown.cend.in/</loc>
+    <loc>https://timedown.cend.in/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://countdown.cend.in/assets/images/og-image.jpg</image:loc>
+      <image:loc>https://timedown.cend.in/assets/images/og-image.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/assets/images/icon-512x512.png</image:loc>
+      <image:loc>https://timedown.cend.in/assets/images/icon-512x512.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/01-events-list.webp</image:loc>
+      <image:loc>https://timedown.cend.in/app_screens/01-events-list.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/02-create-event.webp</image:loc>
+      <image:loc>https://timedown.cend.in/app_screens/02-create-event.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://countdown.cend.in/app_screens/04-countdown-details.webp</image:loc>
+      <image:loc>https://timedown.cend.in/app_screens/04-countdown-details.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://countdown.cend.in/privacy_policy.html</loc>
+    <loc>https://timedown.cend.in/privacy_policy.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://countdown.cend.in/terms_of_service.html</loc>
+    <loc>https://timedown.cend.in/terms_of_service.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://countdown.cend.in/contact.html</loc>
+    <loc>https://timedown.cend.in/contact.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

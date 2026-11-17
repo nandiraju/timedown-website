@@ -33,13 +33,13 @@
   - Retirement milestones
 
 ## Official Pages
-- [Home](https://countdown.cend.in/): App overview, feature walkthrough, interactive event categories, and direct download links
-- [Privacy Policy](https://countdown.cend.in/privacy_policy.html): Complete details on on-device data privacy
-- [Terms of Service](https://countdown.cend.in/terms_of_service.html): Usage terms and license
-- [Contact & Support](https://countdown.cend.in/contact.html): Support and developer contact
-- [XML Sitemap](https://countdown.cend.in/sitemap.xml): Canonical index
+- [Home](https://timedown.cend.in/): App overview, feature walkthrough, interactive event categories, and direct download links
+- [Privacy Policy](https://timedown.cend.in/privacy_policy.html): Complete details on on-device data privacy
+- [Terms of Service](https://timedown.cend.in/terms_of_service.html): Usage terms and license
+- [Contact & Support](https://timedown.cend.in/contact.html): Support and developer contact
+- [XML Sitemap](https://timedown.cend.in/sitemap.xml): Canonical index
 
 ## App Downloads & Contact
 - [Download on the Apple App Store](https://apps.apple.com/us/app/timedown-counttminus/id1644886404)
 - [Get it on Google Play](https://play.google.com/store/apps/details?id=nsri.countdown.app)
-- [Contact & Support](https://countdown.cend.in/contact.html)
+- [Contact & Support](https://timedown.cend.in/contact.html)

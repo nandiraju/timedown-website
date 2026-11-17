@@ -27,4 +27,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://countdown.cend.in/sitemap.xml
+Sitemap: https://timedown.cend.in/sitemap.xml
