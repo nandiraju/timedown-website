@@ -2,6 +2,19 @@
 <html lang="en" class="dark">
 
 <head>
+    <!-- Consent Mode defaults: must run before the Google tag below -->
+    <script src="assets/js/analytics.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5L7ETM7Y7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5L7ETM7Y7E');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -62,9 +75,6 @@
 
     <!-- Precompiled Tailwind CSS (source: src/css/index.css) -->
     <link rel="stylesheet" href="assets/css/index.css?v=c0090d6bcb">
-    <!-- Analytics -->
-    <script src="assets/js/analytics.js"></script>
-
     <noscript>
         <style>
             .reveal {

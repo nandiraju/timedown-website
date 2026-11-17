@@ -1,6 +1,6 @@
 # TimeDown Website (`CLAUDE.md`)
 
-Marketing and legal website for **TimeDown** mobile application on iOS and Android. Deployed on GitHub Pages (`gh-pages` branch) at `https://timedown.cend.in/` via `CNAME`.
+Marketing and legal website for **TimeDown** mobile application on iOS and Android. Deployed on GitHub Pages from the `main` branch at `https://timedown.cend.in/` via `CNAME`.
 
 ## Stack, Build, and Structure
 - **Pages:** `index.html` (landing page), `privacy_policy.html`, `terms_of_service.html`, `contact.html`, and `404.html`.
@@ -22,3 +22,9 @@ Marketing and legal website for **TimeDown** mobile application on iOS and Andro
 
 ## Hard Rules
 - **Never use emojis or Unicode dingbats/symbols anywhere in UI markup, CSS, JS, data attributes, or docs** (this includes infinity, check marks, stars, arrows and decorative bullets). Use the SVG sprite icons or plain text. Before finishing any edit, scan the changed files for emoji and symbol code points.
+
+## Analytics (GA4 `G-5L7ETM7Y7E`)
+- Every page `<head>` starts with `<script src="assets/js/analytics.js"></script>` (root-absolute on `404.html`) followed by the Google tag snippet (async `gtag.js`, `gtag('js')`, `gtag('config', 'G-5L7ETM7Y7E')`). **Keep that order**: `analytics.js` sets Consent Mode v2 defaults, which must exist before the first hit. `analytics.js` must not call `gtag('js')` or `gtag('config')` and must never configure the Mood Meter (`G-HBMC3XJK4X`) or Cend.in (`G-84VRLCP0H7`) streams.
+- Consent: region default denies everything for the EEA, UK and Switzerland; elsewhere analytics is granted; ads storage, user data and personalization are always denied. Choice stored in `localStorage['mm-consent']`; the banner shows only for EEA/UK/CH time zones. `window.mmConsent.open()` reopens it (privacy policy "Cookie settings" button). `store_click` (`store: app_store | google_play`) fires on store links.
+- The privacy policy section `#website-analytics` discloses this. Change consent defaults and that wording in the same release.
+- Test locally with `googletagmanager.com` and `google-analytics.com` blocked so localhost hits never reach the property.

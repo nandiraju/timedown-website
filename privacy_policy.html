@@ -2,6 +2,19 @@
 <html lang="en" class="dark">
 
 <head>
+    <!-- Consent Mode defaults: must run before the Google tag below -->
+    <script src="assets/js/analytics.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5L7ETM7Y7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5L7ETM7Y7E');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,9 +55,7 @@
     <meta property="og:image:height" content="630">
 
     <!-- Precompiled Tailwind CSS -->
-    <link rel="stylesheet" href="assets/css/privacy_policy.css?v=8f0c93b64d">
-    <script src="assets/js/analytics.js"></script>
-
+    <link rel="stylesheet" href="assets/css/privacy_policy.css?v=380e40483e">
     <!-- Dark theme by default -->
     <script>
         (function () {
@@ -206,13 +217,46 @@
                 </section>
 
                 <!-- Section 4 -->
+                <section id="website-analytics" class="app-card rounded-3xl p-8 border border-[var(--surface-border)] space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-[var(--surface-subtle)] border border-[var(--surface-border)] flex items-center justify-center">
+                            <img src="assets/icons/color/stats.svg" alt="" width="32" height="32" class="w-8 h-8" loading="lazy" decoding="async">
+                        </div>
+                        <h2 class="font-[family-name:var(--font-outfit)] text-2xl font-bold text-[var(--text-heading)]">
+                            4. Website Analytics &amp; Cookies
+                        </h2>
+                    </div>
+                    <p class="text-sm leading-relaxed text-[var(--text-main)]">
+                        The TimeDown app collects no data. This website (timedown.cend.in), operated by Srikanth
+                        Nandiraju, uses <strong>Google Analytics 4</strong>, provided by Google, with cookies to understand
+                        how visitors use the site: pages viewed, approximate location (country or city derived from your
+                        IP address by Google), device and browser type, referring site, and clicks on the App Store and
+                        Google Play buttons. We use this only to improve the website. Advertising features are switched
+                        off: no ad cookies, no ad personalization, and no data shared for advertising.
+                    </p>
+                    <p class="text-sm leading-relaxed text-[var(--text-main)]">
+                        <strong>Your choice:</strong> visitors in the EEA, the United Kingdom and Switzerland see a banner,
+                        and analytics cookies are set only after you click Accept. Elsewhere, analytics is on by default.
+                        You can change your choice at any time with the button below, block cookies in your browser, or
+                        install Google's
+                        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-semibold underline">Analytics opt-out add-on</a>.
+                        Google processes this data under its
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-semibold underline">Privacy Policy</a>.
+                    </p>
+                    <button type="button" id="cookie-settings" onclick="window.mmConsent &amp;&amp; window.mmConsent.open()"
+                        class="px-5 py-2.5 rounded-full text-xs font-semibold bg-[var(--surface-subtle)] border border-[var(--surface-border)] text-[var(--text-heading)] hover:text-emerald-400 transition-colors cursor-pointer">
+                        Cookie settings
+                    </button>
+                </section>
+
+                <!-- Section 5 -->
                 <section class="app-card rounded-3xl p-8 border border-[var(--surface-border)] space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 shrink-0 rounded-xl bg-[var(--surface-subtle)] border border-[var(--surface-border)] flex items-center justify-center">
                             <img src="assets/icons/color/mail.svg" alt="" width="32" height="32" class="w-8 h-8" loading="lazy" decoding="async">
                         </div>
                         <h2 class="font-[family-name:var(--font-outfit)] text-2xl font-bold text-[var(--text-heading)]">
-                            4. Contact &amp; Questions
+                            5. Contact &amp; Questions
                         </h2>
                     </div>
                     <p class="text-sm leading-relaxed text-[var(--text-main)]">

@@ -1,10 +1,11 @@
 /*
- * Google Analytics 4: dedicated MoodMeter property (web stream https://moodmeter.cend.in).
- * Never use the Cend.in stream G-84VRLCP0H7 here.
+ * Consent Mode v2 and store-click tracking for the TimeDown website.
  *
- * Load order in every page <head> (must stay in this order):
+ * The GA4 property (G-5L7ETM7Y7E) is configured by the Google tag snippet that every page places right
+ * after <head>. This file must run BEFORE that snippet so the consent defaults exist before the first hit:
  *   1. <script src="assets/js/analytics.js"></script>       (this file, NOT async: sets consent first)
- *   2. <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBMC3XJK4X"></script>
+ *   2. Google tag snippet (async gtag.js + gtag('js') + gtag('config', 'G-5L7ETM7Y7E'))
+ * Never configure the Mood Meter stream (G-HBMC3XJK4X) or the Cend.in stream (G-84VRLCP0H7) here.
  *
  * Consent Mode v2:
  *   - Global default: analytics_storage granted; ad_storage, ad_user_data, ad_personalization denied.
@@ -17,7 +18,6 @@
  * Update the privacy policy in the same release whenever these defaults change.
  */
 (function () {
-  var MEASUREMENT_ID = 'G-HBMC3XJK4X';
   var STORE_KEY = 'mm-consent';
   // ISO 3166-1 alpha-2: EU 27 + Iceland, Liechtenstein, Norway (EEA) + United Kingdom + Switzerland.
   var CONSENT_REGIONS = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT',
@@ -58,8 +58,7 @@
   var stored = readChoice();
   if (stored) gtag('consent', 'update', withAds(stored));
 
-  gtag('js', new Date());
-  gtag('config', MEASUREMENT_ID);
+  // gtag('js') and gtag('config') come from the Google tag snippet in each page, which loads after this file.
 
   // Key event: store badge clicks. store = 'app_store' | 'google_play'.
   document.addEventListener('click', function (e) {
@@ -80,13 +79,13 @@
     'border:1px solid var(--surface-border,rgba(255,255,255,.12));box-shadow:0 18px 40px -12px rgba(2,6,23,.55);' +
     'font:500 13px/1.5 Inter,system-ui,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:12px}' +
     '.mm-consent p{margin:0;flex:1 1 260px}' +
-    '.mm-consent a{color:#6366f1;font-weight:600;text-decoration:underline}' +
-    '.dark .mm-consent a{color:#a5b4fc}' +
+    '.mm-consent a{color:#059669;font-weight:600;text-decoration:underline}' +
+    '.dark .mm-consent a{color:#6ee7b7}' +
     '.mm-consent__actions{display:flex;gap:8px;flex:0 0 auto}' +
     '.mm-consent button{cursor:pointer;border-radius:9999px;padding:8px 16px;font:700 13px/1 Inter,system-ui,sans-serif;' +
     'border:1px solid var(--surface-border,rgba(255,255,255,.12));background:transparent;color:var(--text-heading,#fff)}' +
-    '.mm-consent button[data-choice="granted"]{background:#4f46e5;border-color:#4f46e5;color:#fff}' +
-    '.mm-consent button:focus-visible{outline:2px solid #818cf8;outline-offset:2px}';
+    '.mm-consent button[data-choice="granted"]{background:#059669;border-color:#059669;color:#fff}' +
+    '.mm-consent button:focus-visible{outline:2px solid #34d399;outline-offset:2px}';
 
   var banner = null;
   function closeBanner() { if (banner) { banner.remove(); banner = null; } }
@@ -111,7 +110,7 @@
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML =
       '<p>This website uses Google Analytics cookies to count visits and store-button clicks. ' +
-      'The Mood Meter app itself collects no data. <a href="' + base + 'privacy_policy.html#website-analytics">Details</a></p>' +
+      'The TimeDown app itself collects no data. <a href="' + base + 'privacy_policy.html#website-analytics">Details</a></p>' +
       '<div class="mm-consent__actions">' +
       '<button type="button" data-choice="denied">Decline</button>' +
       '<button type="button" data-choice="granted">Accept</button></div>';
